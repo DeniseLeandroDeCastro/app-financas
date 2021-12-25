@@ -5,7 +5,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.ViewGroup
 import android.widget.AdapterView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.financas.R
 import com.example.financas.dao.TransacaoDAO
@@ -86,7 +85,7 @@ class ListaTransacoesActivity : AppCompatActivity() {
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
-        val idDoMenu = item?.itemId
+        val idDoMenu = item.itemId
         if(idDoMenu == 1) {
             val adapterMenuInfo = item.menuInfo as AdapterView.AdapterContextMenuInfo
             val posicaoDaTransacao = adapterMenuInfo.position
